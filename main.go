@@ -18,6 +18,7 @@ func main() {
 	}
 	logger.SetOutput(file)
 
+	// encode
 	products := &pb.Products{
 		Data: []*pb.Product{
 			{
@@ -48,4 +49,11 @@ func main() {
 	}
 	// compact binary wire format
 	fmt.Println(data)
+
+	// decode
+	decodeProducts := &pb.Products{}
+	if err = proto.Unmarshal(data, decodeProducts); err != nil {
+		logger.Println(err)
+	}
+	fmt.Println(decodeProducts)
 }
