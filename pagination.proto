@@ -1,6 +1,8 @@
 syntax = "proto3";
 package gobufferprotocolproducts;
 
+option go_package = "/pb";
+
 message Pagination {
   uint64 total = 1;
   uint32 per_page = 2;
