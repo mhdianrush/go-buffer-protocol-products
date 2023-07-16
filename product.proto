@@ -3,6 +3,8 @@ package gobufferprotocolproducts;
 
 import "pagination.proto";
 
+option go_package = "/pb";
+
 message Products {
   Pagination pagination = 1;
   repeated Product data = 2;
