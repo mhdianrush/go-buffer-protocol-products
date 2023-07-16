@@ -56,4 +56,13 @@ func main() {
 		logger.Println(err)
 	}
 	fmt.Println(decodeProducts)
+
+	for _, product := range decodeProducts.GetData() {
+		fmt.Println(product.GetId())
+		fmt.Println(product.GetName())
+		fmt.Println(product.GetPrice())
+		fmt.Println(product.GetStock())
+		fmt.Println(product.GetCategory().GetId())
+		fmt.Println(product.GetCategory().GetName())
+	}
 }
