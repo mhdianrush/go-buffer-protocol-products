@@ -18,6 +18,8 @@ func main() {
 	}
 	logger.SetOutput(file)
 
+	logger.Println("Running")
+
 	// encode
 	products := &pb.Products{
 		Data: []*pb.Product{
