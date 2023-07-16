@@ -1,0 +1,9 @@
+syntax = "proto3";
+package gobufferprotocolproducts;
+
+message Pagination {
+  uint64 total = 1;
+  uin32 per_page = 2;
+  uint32 current_page = 3;
+  uint32 last_page = 4;
+}
